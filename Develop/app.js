@@ -10,6 +10,83 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+const managerQuestions = () => {
+    console.log(`Let's build your team`);
+    inquirer
+      .prompt([
+        {
+            type: "input",
+            name: "managerName",
+            message: "Enter name of Manager: "
+        },
+        {
+            type: "input",
+            name: "managerID",
+            message: "Enter employee ID of manager: "
+        },
+        {
+            type: "input",
+            name: "managerEmail",
+            message: "Enter email of manager: "
+        },
+        {
+            type: "input",
+            name: "managerNumber",
+            message: "Enter office number of manager: "
+        }
+    ])
+    .then(response => {
+        const manager = new Manager (
+            response.managerName,
+            response.managerID,
+            response.managerEmail,
+            response.managerNumber
+        );
+
+    });
+
+
+
+//         {
+//             type: "input",
+//             name: "nameEngineer",
+//             message: "Enter name of engineer: "
+//         },
+//         {
+//             type: "input",
+//             name: "idEngineer",
+//             message: "Enter ID of engineer: "
+//         },
+//         {
+//             type: "input",
+//             name: "emailEngineer1",
+//             message: "Enter email of engineer number 1: "
+//         },
+//         {
+//             type: "input",
+//             name: "githubEngineer1",
+//             message: "Enter GitHub Username of engineer number 1: "
+//         },
+        
+  
+//         {
+//             type: "input",
+//             name: "nameIntern",
+//             message: "Enter name of Intern: "
+//         },
+//         {
+//             type: "input",
+//             name: "idIntern",
+//             message: "Enter ID of Intern: "
+//         },
+//         {
+//             type: "input",
+//             name: "emailIntern",
+//             message: "Enter email of Intern:"
+//         },
+//     ]);
+//   }
+
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
