@@ -36,7 +36,7 @@ function createManager() {
         },
         {
             type: "input",
-            name: "managerNumber",
+            name: "managerOffice",
             message: "Enter office number of manager: "
         }
     ])
