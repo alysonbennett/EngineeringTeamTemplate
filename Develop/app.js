@@ -144,6 +144,13 @@ function intern() {
     });
 };
 
+function outputTeam() {
+    if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR)
+    }
+    fs.writeFileSync(outputPath,render(team),"utf-8");
+}
+
 manager();
 
 
@@ -169,4 +176,5 @@ manager();
 // and Intern classes should all extend from a class named Employee; see the directions
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
-// for the provided `render` function to work! ```
+// for the provided `render` function to work
+}
