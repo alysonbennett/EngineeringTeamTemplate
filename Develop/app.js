@@ -9,13 +9,15 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 
 const team = [];
 const idArray = [];
 
 function finishTeam() {
 
-function createManager() {
+function manager() {
     console.log(`Let's build your team`);
     inquirer.prompt([
         {
@@ -65,9 +67,84 @@ function createTeam() {
             "I'm all done"
         ]
         }
+    ]).then(function(response) {
+        if (response.member === "Engineer"){
+            engineer();            
+        } else if (response.member === "Intern"){
+            intern();
+        } else (finishTeam);
+    });
+};
 
-    ])
-}
+function engineer() {
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "engineerName",
+            message: "Enter name of engineer: ",
+            // validate
+        },
+        {
+            type: "input",
+            name: "engineerID",
+            message: "Enter employee ID of engineer: "
+        },
+        {
+            type: "input",
+            name: "engineerEmail",
+            message: "Enter email of engineer: "
+        },
+        {
+            type: "input",
+            name: "engineerGithub",
+            message: "Enter GitHub username for engineer: "
+        }
+    ]).then(function(response) {
+        const engineer = new Engineer(
+            response.engineerName, 
+            response.engineerID,
+            response.engineerEmail,
+            response.engineerGithub);
+            team.push(engineer);
+            idArray.push(response.engineerID);
+            createTeam();
+    });
+};
+
+function intern() {
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "internName",
+            message: "Enter name of intern: ",
+            // validate
+        },
+        {
+            type: "input",
+            name: "internID",
+            message: "Enter employee ID of intern: "
+        },
+        {
+            type: "input",
+            name: "internEmail",
+            message: "Enter email of intern: "
+        },
+        {
+            type: "input",
+            name: "internSchool",
+            message: "Enter school for intern: "
+        }
+    ]).then(function(response) {
+        const intern = new Intern(
+            response.internName,
+            response.internID,
+            response.interEmail,
+            response.internSchool);
+            team.push(intern);
+            idArray.push(internID);
+            createTeam();
+    });
+};
 
 
 //         {
