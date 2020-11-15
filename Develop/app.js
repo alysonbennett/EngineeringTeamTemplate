@@ -1,6 +1,6 @@
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
+const manager = require("./lib/Manager");
+const engineer = require("./lib/Engineer");
+const intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -10,14 +10,19 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-const managerQuestions = () => {
+const team = [];
+const idArray = [];
+
+function finishTeam() {
+
+function createManager() {
     console.log(`Let's build your team`);
-    inquirer
-      .prompt([
+    inquirer.prompt([
         {
             type: "input",
             name: "managerName",
-            message: "Enter name of Manager: "
+            message: "Enter name of Manager: ",
+            // validate
         },
         {
             type: "input",
@@ -42,9 +47,27 @@ const managerQuestions = () => {
             response.managerEmail,
             response.managerNumber
         );
-
+            team.push(manager);
+            idArray.push(answers.managerID);
+            createTeam();
     });
+}
 
+function createTeam() {
+    inquirer.prompt([
+        {
+        type: "list",
+        name: "member",
+        message: "Select a team member to add",
+        choices: [
+            "Engineer",
+            "Intern",
+            "I'm all done"
+        ]
+        }
+
+    ])
+}
 
 
 //         {
