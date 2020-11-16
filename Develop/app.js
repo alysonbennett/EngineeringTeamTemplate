@@ -13,8 +13,6 @@ const render = require("./lib/htmlRenderer");
 const team = [];
 const idArray = [];
 
-function finishTeam() {
-
 function manager() {
     console.log(`Let's build your team`);
     inquirer.prompt([
@@ -48,7 +46,7 @@ function manager() {
             response.managerNumber
         );
             team.push(manager);
-            idArray.push(answers.managerID);
+            idArray.push(response.managerID);
             createTeam();
     });
 }
@@ -70,7 +68,7 @@ function createTeam() {
             engineer();            
         } else if (response.member === "Intern"){
             intern();
-        } else (finishTeam);
+        } else (outputTeam);
     });
 };
 
@@ -136,7 +134,7 @@ function intern() {
         const intern = new Intern(
             response.internName,
             response.internID,
-            response.interEmail,
+            response.internEmail,
             response.internSchool);
             team.push(intern);
             idArray.push(internID);
@@ -148,7 +146,7 @@ function outputTeam() {
     if (!fs.existsSync(OUTPUT_DIR)) {
         fs.mkdirSync(OUTPUT_DIR)
     }
-    fs.writeFileSync(outputPath,render(team),"utf-8");
+    fs.writeFileSync(outputPath, render(team),"utf-8");
 }
 
 manager();
@@ -177,4 +175,4 @@ manager();
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work
-}
+
