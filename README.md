@@ -38,5 +38,5 @@
 
   ## Questions
 
-  If you have any questions, please contact [Alyson](https://github.com/alysonbennett) at alysonbennett@gmail.com.
+  If you have any questions, please contact [Alyson Bennett](https://github.com/alysonbennett) at alysonbennett@gmail.com.
 
