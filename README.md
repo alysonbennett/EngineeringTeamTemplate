@@ -30,7 +30,7 @@
 
   ## Usage
 
-  To use this application, first fork and open the repo onto your local machine. Before attempting to use the app, open your terminal and perform a ```npm install``` to get the necessary packages.
+  To use this application, first fork and open the repo onto your local machine. Before attempting to use the app, open your terminal and perform a ```npm install``` to get the necessary packages. If there is not an empty "output" folder in your repo, create one now. 
 
   Next, type ```node app.js``` into your integrated terminal or command line. This will start the application and prompt the questions to build the software engineering team. Answer each question. To build the team, you must include one manager, and as many engineers and interns as you would like. When finished, select the "I'm all done" option.
 
