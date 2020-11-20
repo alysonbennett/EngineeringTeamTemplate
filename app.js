@@ -1,3 +1,6 @@
+//Main js file to run node
+//For further development, add validations on all prompts
+
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");

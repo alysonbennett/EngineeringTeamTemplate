@@ -1,3 +1,4 @@
+// Test to check manager.js
 const Manager = require("../lib/Manager");
 const Employee = require("../lib/Employee");
 

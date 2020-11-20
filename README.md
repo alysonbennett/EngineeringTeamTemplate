@@ -22,7 +22,8 @@
 
   ## Installation
 
-  To use this application, please first do a npm install
+  To use this application, please first do a npm install in your command line:
+
   ```bash
   npm install
   ```
