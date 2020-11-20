@@ -25,7 +25,6 @@ function manager() {
             type: "input",
             name: "managerName",
             message: "Enter name of Manager: ",
-            // validate
         },
         {
             type: "input",
@@ -85,7 +84,6 @@ function engineer() {
             type: "input",
             name: "engineerName",
             message: "Enter name of engineer: ",
-            // validate
         },
         {
             type: "input",
@@ -120,7 +118,6 @@ function intern() {
             type: "input",
             name: "internName",
             message: "Enter name of intern: ",
-            // validate
         },
         {
             type: "input",

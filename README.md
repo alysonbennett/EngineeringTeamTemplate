@@ -32,6 +32,19 @@
 
   To use this application, first fork and open the repo onto your local machine. Before attempting to use the app, open your terminal and perform a ```npm install``` to get the necessary packages.
 
+  Next, type ```node app.js``` into your integrated terminal or command line. This will start the application and prompt the questions to build the software engineering team. Answer each question. To build the team, you must include one manager, and as many engineers and interns as you would like. When finished, select the "I'm all done" option.
+
+  ![node app.js](assests/node.png)
+
+  The application will automatically deploy a HTML file, which can be found in the Output folder in the repo. Open the ```team.html``` file to see the team that was built in your browser.
+
+  ![Deployed Webpage](assests/deployed.png)
+
+  Watch this video to see the magic!
+
+  ![Video of application](https://drive.google.com/file/d/1ldLegwmfrjjf-IgJQH5cdQT42dLmRsWF/view)
+
+
   ## Credits
 
   Alyson Bennett was the sole collaborator on this project. 
