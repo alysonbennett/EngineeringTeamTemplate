@@ -40,9 +40,9 @@
 
   ![Deployed Webpage](assests/deployed.png)
 
-  Watch this video to see the magic!
+  Watch this gif to see the magic!
 
-  ![Video of application](https://drive.google.com/file/d/1ldLegwmfrjjf-IgJQH5cdQT42dLmRsWF/view)
+  ![Video of application](assests/gif.gif)
 
 
   ## Credits
