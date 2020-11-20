@@ -3,7 +3,13 @@
 
   ## Description
 
-  
+  This application will build a software engineering team with the command line. It will prompt the user for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns. 
+
+  ```
+  As a manager
+  I want to generate a webpage that displays my team's basic info
+  so that I have quick access to emails and GitHub profiles
+  ```
 
   ## Table of Contents
 
@@ -45,7 +51,9 @@
 
   ## Test
 
- 
+  This application has tests for Employee, Engineer, Intern, and Manager. Each test has passed upon deployment.
+
+  To run these tests, perform a ```npm run test``` in your command line. 
 
   ## Questions
 
